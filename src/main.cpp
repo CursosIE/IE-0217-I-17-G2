@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-#include "functions.hpp"
+#include "../include/functions.hpp"
 using namespace std;
 
 //  usleep(time);

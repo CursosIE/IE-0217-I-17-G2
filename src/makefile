@@ -7,13 +7,13 @@ CC=g++
 
 ODIR=../build
 
-_DEPS = functions.h
+_DEPS = functions.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = functions.o
+_OBJ = functions.o main.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
-$(ODIR)/%.o: %.c $(DEPS)
+$(ODIR)/%.o: %.cpp $(DEPS)
 	$(CC) $(CFLAGS) -c -o $@ $< $(INCLUDES)
 
 EXE=matrix
